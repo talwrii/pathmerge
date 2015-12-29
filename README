@@ -1,0 +1,27 @@
+Pathmerge version 0.2
+
+This is a tool for managing PATH, MANPATH and similar environment
+variables.  Instead of messing about with colons and manipulating the
+variables directly, you can say things like
+
+export PATH=`pathmerge -d $HOME/bin $HOME/wine/inst/bin $PATH /opt/kde/bin`
+
+to add new directories at appropriate points.  And because pathmerge
+eliminates duplicates, you won't get a longer and longer list if you
+source the above code more than once.
+
+* Installing
+
+The procedure is the same as for Perl modules.
+
+% perl Makefile.PL PREFIX=/usr/local    # or whatever
+% make
+
+
+* Author and copying
+
+By Ed Avis, <ed@membled.com>.  All files in this package are in the
+public domain, which means there are no copyright restrictions on
+them.  They are offered as-is without any warranty.  There is a web
+page for this program at <http://membled.com/work/apps/pathmerge/>.
+
